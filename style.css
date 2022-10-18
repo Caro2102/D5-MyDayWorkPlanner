@@ -1,0 +1,81 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1;
+  }
+  
+  textarea {
+    background: transparent;
+    border: none;
+    resize: none;
+    color: #000000;
+    border-left: 1px solid black;
+    padding: 10px;
+    width: 103%;
+  }
+  /*Atributos titulo y contenido principal*/
+  .jumbotron {
+    text-align: center;
+    background-color: transparent;
+    color: black;
+    border-radius: 0;
+    border-bottom: 10px solid black;
+    height: auto;
+  }
+  .display-3{
+    font-size: 3.5rem;
+  }
+  .description {
+    white-space: pre-wrap;
+  }
+  /*Atributos contenedor de tabla*/
+  .time-block {
+    text-align: center;
+    border-radius: 15px;
+  }
+  /*Atributos textArea*/
+  .row {
+    height: 70px;
+    border-top: 1px solid white;
+  }
+  /*Atributos donde va la hora*/
+  .hour {
+    background-color: #ffffff;
+    color: #000000;
+    border-top: 1px dashed #000000;
+    padding: 15px;
+  }
+  /*Atributos cambio de color si es pasado*/
+  .past {
+    background-color: #d3d3d3;
+    color: white;
+  }
+  /*Atributos cambio de color si es presente*/
+  .present {
+    background-color: #ff6961;
+    color: white;
+  }
+  /*Atributos cambio de color si es futuro*/
+  .future {
+    background-color: #77dd77;
+    color: white;
+  }
+  /*Atributos Boton guardar*/
+  .saveBtn {
+    border-left: 1px solid black;
+    border-top: 1px solid rgb(255, 253, 253);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #06aed5;
+    color: white;
+  }
+  /*Icono de guardar*/
+  .saveBtn i{
+    margin:9px auto;
+  }
+  
+  .saveBtn i:hover {
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  
