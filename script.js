@@ -14,7 +14,7 @@ $(".containe").append(crteTable);
     crteTable.append(crteTb);
     
 function schedule(){
-    save(m);
+
         for(var i=0; i<horas.length; i++) {
             //Hora actual formato 24hrs
             var currentT=moment();
@@ -69,10 +69,9 @@ function schedule(){
             var row=$(event.currentTarget).parent();
                 var textArea=row.find("textarea");
                 var hours=row.find(".hour");
-                 m=textArea.val();
                 //Se agrega a local estorage el valor de text area y la hora
                 localStorage.setItem(textArea.val(),hours.text());
-                if(localStorage.setItem(m,hours.text())===null) {
+                if(localStorage.setItem(textArea.val(),hours.text())===null) {
                     console.log("nothing in storage");
                     var mostrar=localStorage.getItem(textArea.val())
                     $(".row").text(mostrar);
@@ -80,3 +79,4 @@ function schedule(){
             
     });
 }
+schedule();
