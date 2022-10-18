@@ -51,6 +51,15 @@ function schedule(){
         crteTdE.append(crteTextA)
         crteTr.append(crteTdB);
         crteTdB.append(icon);
+        
+        //Se hacen condiciones dependiendo la hora actual 
+        if(moment(actualT).isSame(newTime)){
+            crteTdE.addClass('present');
+        }else if(moment(actualT).isBefore(newTime)){
+            crteTdE.addClass('future');
+        }else if(moment(actualT).isAfter(newTime)){
+            crteTdE.addClass('past');
+        }
 
     }
 }
