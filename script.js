@@ -62,4 +62,21 @@ function schedule(){
         }
 
     }
+    $(".saveBtn").click(function (event) {
+        event.preventDefault();
+        $(".description").text("Appointment Added to Local Storage");
+        //El cuurent target toma la fila y se busca el text area y la hora
+            var row=$(event.currentTarget).parent();
+                var textArea=row.find("textarea");
+                var hours=row.find(".hour");
+                 m=textArea.val();
+                //Se agrega a local estorage el valor de text area y la hora
+                localStorage.setItem(textArea.val(),hours.text());
+                if(localStorage.setItem(m,hours.text())===null) {
+                    console.log("nothing in storage");
+                    var mostrar=localStorage.getItem(textArea.val())
+                    $(".row").text(mostrar);
+                }
+            
+    });
 }
